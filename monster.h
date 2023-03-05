@@ -3,6 +3,7 @@
 // ====================================================================== // ---------------------------------------------------------------------- //
 //  【基底クラス】モンスター
 // ====================================================================== //
+
 class CMonster
 {
 public:
@@ -23,8 +24,8 @@ public:
 
 private:
 
-	int mLevel;
-	int mHitPoint;
-	int mAttackPoint;
-	int mDefencePoint;
+	int mLevel;        // レベル
+	int mHitPoint;     // HP
+	int mAttackPoint;  // 攻撃
+	int mDefencePoint; // 防御
 };
