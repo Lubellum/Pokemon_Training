@@ -5,14 +5,14 @@
 // ---------------------------------------------------------------------- //
 
 CPikachu::CPikachu()
-	: mLevel(1), mHitpoint(50), mAttackPoint(20), mDefencePoint(20)
+	: CMonster
+	(
+		10,
+		30,
+		20,
+		15
+	)
 {
-	std::cout << "ピカチュウ誕生！\n";
-
-	std::cout << "レベル ：" << mLevel << "\n";
-	std::cout << "HP　　 ：" << mHitpoint << "\n";
-	std::cout << "攻撃力 ：" << mAttackPoint << "\n";
-	std::cout << "防御力 ：" << mDefencePoint << "\n";
 }
 
 // ---------------------------------------------------------------------- //

@@ -8,6 +8,13 @@ class CMonster
 public:
 
 	CMonster();
+	CMonster
+	(
+		int aLevel,
+		int aHitPoint,
+		int aAttackPoint,
+		int aDefencePoint
+	);
 	~CMonster();
 
 	int Attack();
@@ -17,7 +24,7 @@ public:
 private:
 
 	int mLevel;
-	int mHitpoint;
+	int mHitPoint;
 	int mAttackPoint;
 	int mDefencePoint;
 };

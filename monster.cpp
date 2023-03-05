@@ -5,6 +5,22 @@ CMonster::CMonster()
 
 }
 
+CMonster::CMonster(
+	int aLevel,
+	int aHitpoint,
+	int aAttackPoint,
+	int aDefencePoint
+)
+	: mLevel(aLevel), mHitPoint(aHitpoint), mAttackPoint(aAttackPoint), mDefencePoint(aDefencePoint)
+{
+	std::cout << "’a¶!\n";
+
+	std::cout << "ƒŒƒxƒ‹\t= " << mLevel << "\n";
+	std::cout << "HP    \t= " << mHitPoint << "\n";
+	std::cout << "UŒ‚  \t= " << mAttackPoint << "\n";
+	std::cout << "–hŒä  \t= " << mDefencePoint << "\n";
+}
+
 CMonster::~CMonster()
 {
 }
