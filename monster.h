@@ -1,3 +1,7 @@
+#ifndef MONSTER_H_INCLUDED
+
+#define MONSTER_H_INCLUDED
+
 #include <iostream>
 
 // ====================================================================== // ---------------------------------------------------------------------- //
@@ -19,6 +23,7 @@ public:
 	~CMonster();
 
 	int Attack();
+	int Guard(int aAttackpoint);
 	void Damage(int aDamage);
 
 
@@ -29,3 +34,5 @@ private:
 	int mAttackPoint;  // çUåÇ
 	int mDefencePoint; // ñhå‰
 };
+
+#endif
