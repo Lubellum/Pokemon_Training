@@ -1,3 +1,7 @@
+#ifndef SQUITLE_H_INCLUDED
+
+#define SQUITLE_H_INCLUDED
+
 #include "monster.h"
 
 // ========================================================================= //
@@ -10,3 +14,5 @@ public:
     CSquirtle();
     virtual ~CSquirtle();
 };
+
+#endif // !SQUITLE_H_INCLUDED
