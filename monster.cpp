@@ -41,8 +41,8 @@ int CMonster::Attack()
 int CMonster::Guard(int aAttackPoint)
 {
     std::cout << "" << "‚Ì" << "–hŒäI\n";
-    mAttackPoint = mAttackPoint / 2;
-    return mAttackPoint;
+    int result = aAttackPoint / 2;
+    return result;
 }
 
 // ------------------------------------------------------------------------- //
