@@ -1,19 +1,20 @@
 #include "monster.h"
 
 CMonster::CMonster()
-	: mLevel(), mHitPoint(), mAttackPoint(), mDefencePoint()
+	: mName(), mLevel(), mHitPoint(), mAttackPoint(), mDefencePoint()
 {
 }
 
 CMonster::CMonster(
+    int aName,
 	int aLevel,       // ÉåÉxÉã
 	int aHitpoint,    // HP
 	int aAttackPoint, // çUåÇ
 	int aDefencePoint // ñhå‰
 )
-	: mLevel(aLevel), mHitPoint(aHitpoint), mAttackPoint(aAttackPoint), mDefencePoint(aDefencePoint)
+	: mName(aName), mLevel(aLevel), mHitPoint(aHitpoint), mAttackPoint(aAttackPoint), mDefencePoint(aDefencePoint)
 {
-	std::cout << "íaê∂!\n";
+	std::cout << mName << "íaê∂!\n";
 
 	std::cout << "ÉåÉxÉã\t= " << mLevel        << "\n";
 	std::cout << "HP    \t= " << mHitPoint     << "\n";
@@ -30,8 +31,8 @@ CMonster::~CMonster()
 // ------------------------------------------------------------------------- //
 int CMonster::Attack()
 {
-    std::cout << "" << "ÇÃ" << "çUåÇÅI\n";
-    std::cout << "" << "\n";
+    std::cout << mName << "ÇÃ" << "çUåÇÅI\n";
+    std::cout << mName << "\n";
     return mAttackPoint;
 }
 
@@ -40,7 +41,7 @@ int CMonster::Attack()
 // ------------------------------------------------------------------------- //
 int CMonster::Guard(int aAttackPoint)
 {
-    std::cout << "" << "ÇÃ" << "ñhå‰ÅI\n";
+    std::cout << mName << "ÇÃ" << "ñhå‰ÅI\n";
     int result = aAttackPoint / 2;
     return result;
 }
@@ -52,11 +53,11 @@ void CMonster::Damage(int aDamagePoint)
 {
     mHitPoint -= aDamagePoint;
 
-    std::cout << "" << "ÇÕ" << "çUåÇÇéÛÇØÇΩÅB\n";
+    std::cout << mName << "ÇÕ" << "çUåÇÇéÛÇØÇΩÅB\n";
     std::cout << aDamagePoint << " É_ÉÅÅ[ÉWÅI" << "\n";
     std::cout << "écÇËHP = " << mHitPoint << "\n";
     if (mHitPoint <= 0)
     {
-        std::cout << "" << "ÇÕ" << "ì|ÇÍÇΩÅB\n";
+        std::cout << mName << "ÇÕ" << "ì|ÇÍÇΩÅB\n";
     }
 }

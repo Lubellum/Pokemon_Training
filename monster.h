@@ -15,6 +15,7 @@ public:
 	CMonster();
 	CMonster
 	(
+		int aName,
 		int aLevel,
 		int aHitPoint,
 		int aAttackPoint,
@@ -29,6 +30,7 @@ public:
 
 private:
 
+	int mName;         // –¼‘O
 	int mLevel;        // ƒŒƒxƒ‹
 	int mHitPoint;     // HP
 	int mAttackPoint;  // UŒ‚
