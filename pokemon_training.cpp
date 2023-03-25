@@ -4,25 +4,31 @@
 #include "mewtwo.h"
 #include "squirtle.h"
 
-// 1P用の入力関数
-// 0 -> attack, 1 -> guard
-int inputaction1();
-
-// 2P用の入力関数
-// 0 -> attack, 1 -> guard
-int inputaction2();
-
-void Battle(CMonster * pokemon1, CMonster* pokemon2)
+enum class tAction : int
 {
-	int pokemon1AttackPoint = pokemon1->Attack();
-	int pokemon1result = pokemon2->Guard(pokemon1AttackPoint);
-	pokemon2->Damage(pokemon1result);
+	tAttack, // 0
+	tGuard,  // 1
+};
 
-	int pokemon2AttackPoint = pokemon2->Attack();
-	int pokemon2result = pokemon1->Guard(pokemon2AttackPoint);
-	pokemon1->Damage(pokemon2result);
+// 1P用の入力関数
+tAction inputaction1()
+{
+	std::cout << "数字を入力してください 攻撃：0  防御；1\n";
+	int command;
+	std::cin >> command;
+
+	return static_cast<tAction>(command);
 }
 
+// 2P用の入力関数
+tAction inputaction2()
+{
+	std::cout << "数字を入力してください 攻撃：0  防御；1\n";
+	int command;
+	std::cin >> command;
+
+	return static_cast<tAction>(command);
+}
 
 int main()
 {
@@ -30,9 +36,6 @@ int main()
 	CMewtwo  mewtwo;
 	CSquirtle squirtle;
 
-	int inputaction1();
-	int inputaction2();
-
-	Battle(&pikachu, &mewtwo);
-	Battle(&pikachu, &squirtle);
+	tAction inputaction1();
+	tAction inputaction2();
 }
