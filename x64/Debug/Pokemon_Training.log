@@ -1,12 +1,5 @@
 ﻿  mewtwo.cpp
-C:\Users\azuky\source\repos\Pokemon_Training\mewtwo.cpp(8,12): error C2661: 'CMonster::CMonster': 4 個の引数を伴うオーバーロードされた関数はありません。
-C:\Users\azuky\source\repos\Pokemon_Training\mewtwo.cpp(8,12): message : 引数リスト '(int, int, int, int)' を一致させようとしているとき
-  monster.cpp
   pikachu.cpp
-C:\Users\azuky\source\repos\Pokemon_Training\pikachu.cpp(8,12): error C2661: 'CMonster::CMonster': 4 個の引数を伴うオーバーロードされた関数はありません。
-C:\Users\azuky\source\repos\Pokemon_Training\pikachu.cpp(8,12): message : 引数リスト '(int, int, int, int)' を一致させようとしているとき
-  pokemon_training.cpp
   squirtle.cpp
-C:\Users\azuky\source\repos\Pokemon_Training\squirtle.cpp(8,12): error C2661: 'CMonster::CMonster': 4 個の引数を伴うオーバーロードされた関数はありません。
-C:\Users\azuky\source\repos\Pokemon_Training\squirtle.cpp(8,12): message : 引数リスト '(int, int, int, int)' を一致させようとしているとき
   コードを生成中...
+  Pokemon_Training.vcxproj -> C:\Users\azuky\source\repos\Pokemon_Training\x64\Debug\pokemon_Training.exe
