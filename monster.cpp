@@ -6,7 +6,7 @@ CMonster::CMonster()
 }
 
 CMonster::CMonster(
-    int aName,
+    std::string aName,
 	int aLevel,       // ƒŒƒxƒ‹
 	int aHitpoint,    // HP
 	int aAttackPoint, // UŒ‚

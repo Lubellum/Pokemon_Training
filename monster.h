@@ -15,7 +15,7 @@ public:
 	CMonster();
 	CMonster
 	(
-		int aName,
+		std::string aName,
 		int aLevel,
 		int aHitPoint,
 		int aAttackPoint,
@@ -30,7 +30,7 @@ public:
 
 private:
 
-	int mName;         // –¼‘O
+	std::string mName;         // –¼‘O
 	int mLevel;        // ƒŒƒxƒ‹
 	int mHitPoint;     // HP
 	int mAttackPoint;  // UŒ‚
