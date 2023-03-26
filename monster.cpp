@@ -38,10 +38,10 @@ int CMonster::Attack()
 // ------------------------------------------------------------------------- //
 //  防御.
 // ------------------------------------------------------------------------- //
-int CMonster::Guard(int aAttackPoint)
+bool CMonster::Guard()
 {
     std::cout << mName << "の" << "防御！\n";
-    int result = aAttackPoint / 2;
+    bool result = true;
     return result;
 }
 
@@ -50,10 +50,15 @@ int CMonster::Guard(int aAttackPoint)
 // ------------------------------------------------------------------------- //
 void CMonster::Damage(int aDamagePoint)
 {
-    mHitPoint -= aDamagePoint;
-
     std::cout << mName << "は" << "攻撃を受けた。\n";
+
+    if (Guard() == true)
+    {
+        aDamagePoint -= aDamagePoint / 2;
+    }
+
     std::cout << aDamagePoint << " ダメージ！" << "\n";
+    mHitPoint -= aDamagePoint;
     std::cout << "残りHP = " << mHitPoint << "\n";
     if (mHitPoint <= 0)
     {

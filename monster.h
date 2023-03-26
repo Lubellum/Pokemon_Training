@@ -24,7 +24,7 @@ public:
 	~CMonster();
 
 	int Attack();
-	int Guard(int aAttackpoint);
+	bool Guard();
 	void Damage(int aDamage);
 
 
