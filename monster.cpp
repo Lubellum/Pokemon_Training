@@ -32,7 +32,6 @@ CMonster::~CMonster()
 int CMonster::Attack()
 {
     std::cout << mName << "‚Ì" << "UŒ‚I\n";
-    std::cout << mName << "\n";
     return mAttackPoint;
 }
 
