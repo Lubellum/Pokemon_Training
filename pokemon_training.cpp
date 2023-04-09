@@ -47,17 +47,17 @@ void execusion(CMonster * pokemon1, CMonster * pokemon2, tAction command1, tActi
 	}
 	else if (command1 == tAction::tAttack && command2 == tAction::tGuard)
 	{
-		int pokemon2AttackPoint = pokemon2->Attack();
-		pokemon1->Guard();
-
-		pokemon1->Damage(pokemon2AttackPoint);
-	}
-	else if (command1 == tAction::tGuard && command2 == tAction::tAttack)
-	{
 		int pokemon1AttackPoint = pokemon1->Attack();
 		pokemon2->Guard();
 
 		pokemon2->Damage(pokemon1AttackPoint);
+	}
+	else if (command1 == tAction::tGuard && command2 == tAction::tAttack)
+	{
+		int pokemon2AttackPoint = pokemon2->Attack();
+		pokemon1->Guard();
+
+		pokemon1->Damage(pokemon2AttackPoint);
 	}
 	else if (command1 == tAction::tGuard && command2 == tAction::tGuard)
 	{
