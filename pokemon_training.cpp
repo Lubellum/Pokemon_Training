@@ -3,12 +3,21 @@
 #include "pikachu.h"
 #include "mewtwo.h"
 #include "squirtle.h"
+#include <random>
 
 enum class tAction : int
 {
 	tAttack, // 0
 	tGuard,  // 1
 };
+
+tAction random_command()
+{
+	std::random_device seed;
+	std::mt19937 mt(seed());
+	
+	return static_cast<tAction>(mt() %2);
+}
 
 // 1P用の入力関数
 tAction inputaction1()
@@ -20,14 +29,10 @@ tAction inputaction1()
 	return static_cast<tAction>(command);
 }
 
-// 2P用の入力関数
+//// 2P用の入力関数
 tAction inputaction2()
 {
-	std::cout << "数字を入力してください 攻撃：0  防御；1\n";
-	int command;
-	std::cin >> command;
-
-	return static_cast<tAction>(command);
+	return random_command();
 }
 
 void execusion(CMonster * pokemon1, CMonster * pokemon2, tAction command1, tAction command2)
@@ -66,6 +71,8 @@ void execusion(CMonster * pokemon1, CMonster * pokemon2, tAction command1, tActi
 
 int main()
 {
+	random_command();
+
 	CPikachu pikachu;
 	CMewtwo  mewtwo;
 	CSquirtle squirtle;
