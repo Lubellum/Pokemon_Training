@@ -41,8 +41,8 @@ int CMonster::Attack()
 bool CMonster::Guard()
 {
     std::cout << mName << "‚Ì" << "–hŒäI\n";
-    bool result = true;
-    return result;
+    mGuardFlag = true;
+    return mGuardFlag;
 }
 
 // ------------------------------------------------------------------------- //
@@ -52,7 +52,7 @@ void CMonster::Damage(int aDamagePoint)
 {
     std::cout << mName << "‚Í" << "UŒ‚‚ðŽó‚¯‚½B\n";
 
-    if (Guard() == true)
+    if (mGuardFlag)
     {
         aDamagePoint -= aDamagePoint / 2;
     }

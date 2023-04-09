@@ -35,6 +35,7 @@ private:
 	int mHitPoint;     // HP
 	int mAttackPoint;  // UŒ‚
 	int mDefencePoint; // –hŒä
+	bool mGuardFlag;
 };
 
 #endif
