@@ -23,6 +23,7 @@ public:
 	);
 	~CMonster();
 
+	int pass_HP();
 	int Attack();
 	bool Guard();
 	void Damage(int aDamage);

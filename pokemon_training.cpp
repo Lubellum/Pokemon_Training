@@ -35,6 +35,8 @@ tAction inputaction2()
 	return random_command();
 }
 
+
+
 void execusion(CMonster * pokemon1, CMonster * pokemon2, tAction command1, tAction command2)
 {
 	if (command1 == tAction::tAttack && command2 == tAction::tAttack)
@@ -69,6 +71,25 @@ void execusion(CMonster * pokemon1, CMonster * pokemon2, tAction command1, tActi
 	}
 }
 
+bool should_continue(CMonster * pokemon1, CMonster * pokemon2)
+{
+	int pokemon1HP = pokemon1->pass_HP();
+	int pokemon2HP = pokemon1->pass_HP();
+
+	if (pokemon1HP < 0)
+	{
+		return false;
+	}
+	else if (pokemon2HP < 0)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
 int main()
 {
 	random_command();
@@ -77,8 +98,12 @@ int main()
 	CMewtwo  mewtwo;
 	CSquirtle squirtle;
 
-	tAction command1 = inputaction1();
-	tAction command2 = inputaction2();
+	while (should_continue(&pikachu, &mewtwo))
+	{
+		tAction command1 = inputaction1();
+		tAction command2 = inputaction2();
 
-	execusion(&pikachu, &mewtwo, command1, command2);
+		execusion(&pikachu, &mewtwo, command1, command2);
+	}
+	std::cout << "ゲーム終了\n";
 }
