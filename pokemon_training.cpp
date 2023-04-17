@@ -35,8 +35,6 @@ tAction inputaction2()
 	return random_command();
 }
 
-
-
 void execusion(CMonster * pokemon1, CMonster * pokemon2, tAction command1, tAction command2)
 {
 	if (command1 == tAction::tAttack && command2 == tAction::tAttack)
