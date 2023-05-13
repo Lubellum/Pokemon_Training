@@ -71,14 +71,11 @@ void execusion(CMonster * pokemon1, CMonster * pokemon2, tAction command1, tActi
 
 bool should_continue(CMonster * pokemon1, CMonster * pokemon2)
 {
-	int pokemon1HP = pokemon1->pass_HP();
-	int pokemon2HP = pokemon1->pass_HP();
-
-	if (pokemon1HP < 0)
+	if (pokemon1->FaintFlag())
 	{
 		return false;
 	}
-	else if (pokemon2HP < 0)
+	else if (pokemon2->FaintFlag())
 	{
 		return false;
 	}
@@ -90,8 +87,6 @@ bool should_continue(CMonster * pokemon1, CMonster * pokemon2)
 
 int main()
 {
-	random_command();
-
 	CPikachu pikachu;
 	CMewtwo  mewtwo;
 	CSquirtle squirtle;

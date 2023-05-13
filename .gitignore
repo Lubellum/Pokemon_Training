@@ -1,2 +1,9 @@
 
 .vs/Pokemon_Training/v17/Browse.VC.opendb
+*.vsidx
+.vs/Pokemon_Training/v17/.suo
+*.db
+*.db-shm
+*.db-wal
+*.ipch
+*.obj

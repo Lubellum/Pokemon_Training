@@ -26,9 +26,16 @@ CMonster::~CMonster()
 {
 }
 
-int CMonster::pass_HP()
+bool CMonster::FaintFlag()
 {
-    return mHitPoint;
+    if (mHitPoint <= 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 // ------------------------------------------------------------------------- //
