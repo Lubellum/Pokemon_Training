@@ -107,12 +107,24 @@ int main()
 	CMewtwo  mewtwo[3];
 	CSquirtle squirtle[3];
 
-	while (IsRoundFinish(&pikachu[0], &mewtwo[0]) == false)
+	int Team1CurrentNumber = 0;
+	int Team2CurrentNumber = 0;
+
+	while (IsGameFinish(pikachu, mewtwo) == false)
 	{
+		std::cout << Team1CurrentNumber << "\n";
+		std::cout << Team2CurrentNumber << "\n";
+		
 		tAction command1 = inputaction1();
 		tAction command2 = inputaction2();
 
-		execusion(&pikachu[0], &mewtwo[0], command1, command2);
+		execusion(&pikachu[Team1CurrentNumber], &mewtwo[Team2CurrentNumber], command1, command2);
+
+		if (IsRoundFinish(&pikachu[Team1CurrentNumber], &mewtwo[Team2CurrentNumber]))
+		{
+			Team1CurrentNumber++;
+			Team2CurrentNumber++;
+		}
 	}
 	std::cout << "ゲーム終了\n";
 }
