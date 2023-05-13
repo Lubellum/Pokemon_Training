@@ -85,9 +85,28 @@ bool IsRoundFinish(CMonster * pokemon1, CMonster * pokemon2)
 	}
 }
 
+bool Team1Annihilation(CMonster* team1)
+{
+	int FaintCount = 0;
+
+	for (int i = 0; i < 3; i++)
+	{
+		if (team1[i].FaintFlag())
+		{
+			FaintCount++;
+		}
+	}
+
+	if (FaintCount == 3)
+	{
+		return true;
+	}
+	return false;
+}
+
 bool IsGameFinish(CMonster * team1, CMonster* team2)
 {
-	if (team1[0].FaintFlag() && team1[1].FaintFlag() && team1[2].FaintFlag())
+	if (Team1Annihilation(team1))
 	{
 		return true;
 	}
