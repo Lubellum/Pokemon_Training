@@ -1,7 +1,7 @@
 #include "monster.h"
 
 CMonster::CMonster()
-	: mName(), mLevel(), mHitPoint(), mAttackPoint(), mDefencePoint()
+	: mName(), mLevel(), mHitPoint(), mAttackPoint(), mDefencePoint(), mGuardFlag()
 {
 }
 
@@ -12,7 +12,7 @@ CMonster::CMonster(
 	int aAttackPoint, // çUåÇ
 	int aDefencePoint // ñhå‰
 )
-	: mName(aName), mLevel(aLevel), mHitPoint(aHitpoint), mAttackPoint(aAttackPoint), mDefencePoint(aDefencePoint)
+	: mName(aName), mLevel(aLevel), mHitPoint(aHitpoint), mAttackPoint(aAttackPoint), mDefencePoint(aDefencePoint), mGuardFlag()
 {
 	std::cout << mName << "íaê∂!\n";
 
