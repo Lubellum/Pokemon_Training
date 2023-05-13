@@ -69,7 +69,7 @@ void execusion(CMonster * pokemon1, CMonster * pokemon2, tAction command1, tActi
 	}
 }
 
-bool should_continue(CMonster * pokemon1, CMonster * pokemon2)
+bool IsRoundFinish(CMonster * pokemon1, CMonster * pokemon2)
 {
 	if (pokemon1->FaintFlag())
 	{
@@ -87,16 +87,16 @@ bool should_continue(CMonster * pokemon1, CMonster * pokemon2)
 
 int main()
 {
-	CPikachu pikachu;
-	CMewtwo  mewtwo;
-	CSquirtle squirtle;
+	CPikachu pikachu[3];
+	CMewtwo  mewtwo[3];
+	CSquirtle squirtle[3];
 
-	while (should_continue(&pikachu, &mewtwo))
+	while (IsRoundFinish(&pikachu[0], &mewtwo[0]))
 	{
 		tAction command1 = inputaction1();
 		tAction command2 = inputaction2();
 
-		execusion(&pikachu, &mewtwo, command1, command2);
+		execusion(&pikachu[0], &mewtwo[0], command1, command2);
 	}
 	std::cout << "ゲーム終了\n";
 }
