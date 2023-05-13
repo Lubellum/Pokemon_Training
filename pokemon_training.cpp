@@ -73,15 +73,15 @@ bool IsRoundFinish(CMonster * pokemon1, CMonster * pokemon2)
 {
 	if (pokemon1->FaintFlag())
 	{
-		return false;
+		return true;
 	}
 	else if (pokemon2->FaintFlag())
 	{
-		return false;
+		return true;
 	}
 	else
 	{
-		return true;
+		return false;
 	}
 }
 
@@ -107,7 +107,7 @@ int main()
 	CMewtwo  mewtwo[3];
 	CSquirtle squirtle[3];
 
-	while (IsRoundFinish(&pikachu[0], &mewtwo[0]))
+	while (IsRoundFinish(&pikachu[0], &mewtwo[0]) == false)
 	{
 		tAction command1 = inputaction1();
 		tAction command2 = inputaction2();
