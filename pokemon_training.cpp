@@ -85,6 +85,22 @@ bool IsRoundFinish(CMonster * pokemon1, CMonster * pokemon2)
 	}
 }
 
+bool IsGameFinish(CMonster * team1, CMonster* team2)
+{
+	if (team1[0].FaintFlag() && team1[1].FaintFlag() && team1[2].FaintFlag())
+	{
+		return true;
+	}
+	else if (team2[0].FaintFlag() && team2[1].FaintFlag() && team2[2].FaintFlag())
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 int main()
 {
 	CPikachu pikachu[3];
