@@ -122,8 +122,15 @@ int main()
 
 		if (IsRoundFinish(&pikachu[Team1CurrentNumber], &mewtwo[Team2CurrentNumber]))
 		{
-			Team1CurrentNumber++;
-			Team2CurrentNumber++;
+			if (pikachu[Team1CurrentNumber].FaintFlag())
+			{
+				Team1CurrentNumber++;
+			}
+			
+			if (mewtwo[Team2CurrentNumber].FaintFlag())
+			{
+				Team2CurrentNumber++;
+			}
 		}
 	}
 	std::cout << "ゲーム終了\n";
