@@ -12,7 +12,14 @@ class CMonster
 {
 public:
 
-	CMonster();
+	virtual bool FaintFlag();
+	virtual int Attack();
+	virtual bool Guard();
+	virtual void Damage(int aDamage);
+
+
+protected:
+
 	CMonster
 	(
 		std::string aName,
@@ -21,16 +28,14 @@ public:
 		int aAttackPoint,
 		int aDefencePoint
 	);
-	~CMonster();
-
-	bool FaintFlag();
-	int Attack();
-	bool Guard();
-	void Damage(int aDamage);
+	virtual ~CMonster() = 0;
 
 
 private:
 
+	// todo:
+	// 引数なしのコンストラクタは、【インスタンスを生成時？】に自動で作成されるため、記述は不要？
+	//CMonster();
 	std::string mName;         // 名前
 	int mLevel;        // レベル
 	int mHitPoint;     // HP

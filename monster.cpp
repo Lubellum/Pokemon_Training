@@ -1,9 +1,9 @@
 #include "monster.h"
 
-CMonster::CMonster()
-	: mName(), mLevel(), mHitPoint(), mAttackPoint(), mDefencePoint(), mGuardFlag()
-{
-}
+//CMonster::CMonster()
+//	: mName(), mLevel(), mHitPoint(), mAttackPoint(), mDefencePoint(), mGuardFlag()
+//{
+//}
 
 CMonster::CMonster(
     std::string aName,

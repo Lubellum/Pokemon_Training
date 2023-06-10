@@ -1,1 +1,2 @@
 C:\Users\azuky\source\repos\Pokemon_Training\x64\Debug\pokemon_Training.exe
+D:\repos\Pokemon_Training\x64\Debug\pokemon_Training.exe
